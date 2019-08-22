@@ -72,7 +72,7 @@ public class PushNotification implements IPushNotification {
 
     @Override
     public void onReceived() throws InvalidNotificationException {
-        if (mNotificationProps.getBody() != null) {
+        if (mNotificationProps.getBody() != null || mNotificationProps.getTitle() != null) {
             postNotification(null);
         }
         notifyReceivedToJS();
