@@ -151,7 +151,7 @@ public class PushNotification implements IPushNotification {
         final Notification.Builder notification = new Notification.Builder(mContext)
                 .setContentTitle(mNotificationProps.getTitle())
                 .setContentText(mNotificationProps.getBody())
-                .setStyle(androidx.core.app.NotificationCompat.BigPictureStyle()
+                .setStyle(new Notification.BigTextStyle()
                     .bigText(mNotificationProps.getBody()))
                 .setContentIntent(intent)
                 .setDefaults(Notification.DEFAULT_ALL)
